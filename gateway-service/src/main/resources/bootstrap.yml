@@ -1,0 +1,29 @@
+management:
+  endpoints:
+    web:
+      exposure:
+        include: '*'
+
+spring:
+  application:
+    name: gateway-service
+  cloud:
+    gateway:
+      routes:
+        - id: demo-service
+          uri: http://www.baidu.com
+          predicates:
+            - Path=/demo/**
+
+    nacos:
+      config:
+        file-extension: json
+        namespace: e4a364f0-6a62-4f45-9827-0eeaa37934d2
+        group: INFRA
+        server-addr: 127.0.0.1:8848
+      discovery:
+        namespace: e4a364f0-6a62-4f45-9827-0eeaa37934d2
+        group: INFRA
+        server-addr: 127.0.0.1:8848
+      password: nacos
+      username: nacos
