@@ -15,7 +15,7 @@ public class CustomNacosConfigProperties {
     public static String NACOS_CONFIG_DATA_ID;
     public static String NACOS_CONFIG_GROUP_ID;
 
-    @Value("${shopin.gateway.dynamic-route.nacos.dataId}")
+    @Value("${xuanji.gateway.dynamic-route.nacos.dataId}")
     private void setNacosConfigDataId(String nacosConfigDataId) {
         NACOS_CONFIG_DATA_ID = nacosConfigDataId;
     }
@@ -26,7 +26,7 @@ public class CustomNacosConfigProperties {
     }
 
 
-    @Value("${shopin.gateway.dynamic-route.nacos.group:DEFAULT_GROUP}")
+    @Value("${xuanji.gateway.dynamic-route.nacos.group:DEFAULT_GROUP}")
     private void setNacosConfigGroupId(String nacosConfigGroupId) {
         NACOS_CONFIG_GROUP_ID = nacosConfigGroupId;
     }

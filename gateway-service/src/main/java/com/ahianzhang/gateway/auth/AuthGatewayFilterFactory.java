@@ -23,7 +23,7 @@ import java.nio.charset.StandardCharsets;
 @Component
 public class AuthGatewayFilterFactory extends AbstractGatewayFilterFactory<AuthGatewayFilterFactory.Config> {
 
-    @Value("${shopin.gateway.auth.skip-address}")
+    @Value("${xuanji.gateway.auth.skip-address}")
     private String skipAuthAddress;
 
     private final StringRedisTemplate stringRedisTemplate;

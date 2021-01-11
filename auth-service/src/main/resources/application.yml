@@ -1,0 +1,35 @@
+spring:
+  datasource:
+    url: jdbc:mysql://localhost:3306/auth?useSSL=false&serverTimezone=Asia/Shanghai
+    username: root
+    password: 123456
+  redis:
+    host: localhost # Redis服务器地址
+    database: 1 # Redis数据库索引（默认为0）
+    port: 6379 # Redis服务器连接端口
+    password: # # Redis服务器连接密码（默认为空）
+    timeout: 1000ms # 连接超时时间
+logging:
+  level:
+    org:
+      springframework:
+        jdbc:
+          core:
+            JdbcTemplate: debug
+
+# 账户户信息查询地址
+xuanji:
+  account:
+    url: "http://localhost:8088"
+
+  oauth:
+    access-token:
+      expire-time: 7200
+    refresh-token:
+       # 滑动过期时长，在绝对过期以内可以重新刷新 token，0: 永不过期；
+      sliding-expiration: 0
+      # 绝对过期时长，0: 永不过期，到时间后将强制重新登录
+      absolute-expiration: 604800
+
+
+

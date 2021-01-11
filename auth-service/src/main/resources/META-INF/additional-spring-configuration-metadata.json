@@ -1,0 +1,13 @@
+{
+  "properties": [
+    {
+      "name": "xuanji.account.url",
+      "type": "java.lang.String",
+      "description": "认证服务接口地址."
+    },
+    {
+      "name": "xuanji.oauth.access-token.expire-time",
+      "type": "java.lang.String",
+      "description": "过期时间."
+    }
+  ] }

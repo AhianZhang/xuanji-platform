@@ -14,13 +14,13 @@ import org.springframework.context.annotation.Configuration;
  * @date 2020/8/11 5:50 PM
  **/
 @Configuration
-@ConditionalOnProperty(prefix = "shopin.gateway.dynamic-route",name = "enable",havingValue = "true")
+@ConditionalOnProperty(prefix = "xuanji.gateway.dynamic-route",name = "enable",havingValue = "true")
 public class DynamicRouteConfig {
     @Autowired
     private ApplicationEventPublisher publisher;
 
     @Configuration
-    @ConditionalOnProperty(prefix = "shopin.gateway.dynamic-route", name = "dataSource", havingValue = "nacos", matchIfMissing = true)
+    @ConditionalOnProperty(prefix = "xuanji.gateway.dynamic-route", name = "dataSource", havingValue = "nacos", matchIfMissing = true)
     public class NaocsDataSource{
         @Autowired
         private NacosConfigProperties nacosConfigProperties;
