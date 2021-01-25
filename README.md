@@ -14,4 +14,4 @@
 [详细介绍](gateway-service/README.md)
 ## 鉴权服务
 遵循 OAuth2 授权协议自研服务
-
+[详细介绍](auth-service/README.md)
